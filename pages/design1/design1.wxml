@@ -1,0 +1,12 @@
+
+        <view class="u-img1" mode="aspectFill" >       
+            <image class="imageClass"  style="top:0rpx;left:0rpx;width:750rpx;height:500rpx" src="{{gif}}"></image>
+            <image class="imageClass" mode="widthFix" style=" top:500rpx;left:-50rpx; width:850rpx;height:400rpx;" src="https://i.loli.net/2020/08/19/GHMYlCrv5hNDA1n.png" ></image>  
+        </view> 
+      
+<button class="mybutton1" style="top:1025rpx;left:175rpx;width:400rpx;height:100rpx" bindtap="upImage">  
+<view class="mytext" style="top:1000rpx;left:250rpx;">
+拍照/上传照片
+</view>
+</button>
+

@@ -1,0 +1,53 @@
+
+<view class='scrollPage flex column'>
+  <view class='header-bg'>
+    <view class='user bg-white'>
+      <v-avatar type='square' size='150' v-class='avatar-class' src="../../images/head.jpg"></v-avatar>
+      <view class='flex column align-center usr-info'>
+ 
+        <text class='name'>Bob</text>
+<!-- <open-data type="userAvatarUrl"></open-data>
+<open-data type="userNickName"></open-data> -->
+      </view>
+    </view>
+  </view>
+  <v-grid col="3">
+    <v-grid-item  v-class='item-class'>
+      <v-grid-icon>
+        <v-icon type='default' icon='icon-order' size='55'></v-icon>
+      </v-grid-icon>
+      订单
+    </v-grid-item>
+    <v-grid-item  badge='{{3}}'  v-class='item-class'>
+      <v-grid-icon>
+        <v-icon type='default' icon='icon-coupon' size='55'></v-icon>
+      </v-grid-icon>
+      优惠券
+    </v-grid-item>
+    <v-grid-item  v-class='item-class'>
+      <v-grid-icon>
+        <v-icon type='default' icon='icon-gift'size='55'></v-icon>
+      </v-grid-icon>
+      邀请好友
+    </v-grid-item>
+    <v-grid-item  v-class='item-class'>
+      <v-grid-icon>
+        <v-icon type='default' icon='icon-fellback' size='55'></v-icon>
+      </v-grid-icon>
+      意见反馈
+    </v-grid-item>
+    <v-grid-item  v-class='item-class'>
+      <v-grid-icon>
+        <v-icon type='default' icon='icon-history' size='55'></v-icon>
+      </v-grid-icon>
+      历史发型
+    </v-grid-item>
+    <v-grid-item v-class='item-class'>
+      <v-grid-icon>
+        <v-icon type='default' icon='icon-file' size='55'></v-icon>
+      </v-grid-icon>
+      个人档案
+    </v-grid-item>
+  </v-grid>
+  <view class='flex-grow bg-white prefix-bottom'></view>
+</view>

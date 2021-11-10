@@ -1,0 +1,30 @@
+<block wx:for="{{list}}" wx:key>
+  <v-card v-class='store-list'>
+      <view class='store-title'>
+        <text>{{item.storeName}}</text>
+        <text>{{item.distance}}m</text>
+      </view>
+
+      <view class='price'>
+        <text class='server-item'>{{item.serverItem}}</text>
+        <text class='price-text'>¥{{item.price}}</text>
+
+        <text class='red-tip' wx:if="{{index == 0}}">离你最近</text>
+      </view>
+
+      <view class='activity'>
+        <v-tag text='减' wx:if="{{item.activityType == 1}}" type='warning'></v-tag>
+        <v-tag text='奖' wx:if="{{item.activityType == 2}}" type='success'></v-tag>
+        <text class='activity-content'>{{item.activity}}</text>
+      </view>
+
+      <v-button type='default' size='small' v-class='button'>2人正在剪发</v-button>
+
+      <view class='adress'>
+        <text class='cuIcon icon-adress'></text>
+        <text class='adress-text'>{{item.address}}</text>
+      </view>
+
+      <v-button type="primary" size='normal' v-class='position-button' >去剪发</v-button>
+  </v-card>
+</block>

@@ -1,0 +1,90 @@
+page {
+  background-color: #fff;
+}
+.imageClass {
+  background-color: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 80%;
+  z-index:999;
+}
+.try-hairstyle {
+  width: 100%;
+  height: 100vh;
+  
+  background-size: 100% 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.try-hairstyle .th-img {
+  font-size: 0;
+}
+
+.try-hairstyle .img {
+  width: 750rpx;
+}
+
+.try-hairstyle .but1 {
+  width: 596rpx;
+  position: absolute;
+  height: 140rpx;
+  top: 946rpx;
+  left: 80rpx;
+}
+
+.btn1 {
+  width: 498rpx;
+  height: 94rpx;
+}
+
+.sharebtn {
+  margin-left: 50rpx;
+  width: 300rpx;
+  height: 100rpx;
+}
+
+.btncls {
+  width: 100%;
+  position: fixed;
+  bottom: 40rpx;
+}
+
+.btnlst {
+  display: inline-flex;
+}
+
+.btnst1 {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  line-height: 1;
+}
+
+button::after {
+  border: none;
+}
+
+.mybutton1{
+  background:linear-gradient(90deg,#FDFFB6 ,#CAFFBF,#9BF6FF);
+  /* background:linear-gradient(to right, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%); */
+  /* background:linear-gradient(to right, #ffecd2 0%, #fcb69f 100%); */
+  width: 550rpx;
+  height: 150rpx;
+  border-radius:75rpx;
+  position:fixed;
+  z-index: 1000;
+}
+.mybutton1 .mytext{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 140rpx;
+  font-size: 40rpx;
+  position:fixed;
+  z-index: 1001;
+}

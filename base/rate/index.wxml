@@ -1,0 +1,25 @@
+<block wx:for="{{list}}" wx:key>
+    <view class='rate'>
+      <v-avatar size='60' src='{{item.headImg}}' v-class='avatar'></v-avatar>
+
+      <view class='right'>
+        <view class='user-info'>
+          <text class='name'>{{item.name}}<text class='phone'>({{item.phone}})</text></text>
+          <v-rate value='{{item.star}}' v-class='rate-class'></v-rate>
+        </view>
+        <view class='content'>{{item.content}}</view>
+
+        <view>
+          <v-icon icon='icon-label' v-class='label-class' size='31'></v-icon>
+          <text class='label-content'>{{item.label}}</text>
+        </view>
+
+        <view class='last'>
+          <text>发型师：{{item.stylist}}</text>
+          <text>{{item.creatTime}}</text>
+        </view>
+      </view>
+
+      
+    </view>
+</block>

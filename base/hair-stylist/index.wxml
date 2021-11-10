@@ -1,0 +1,52 @@
+<block wx:for="{{list}}" wx:key>
+  <v-card v-class='stylist'>
+    <!-- 头像 -->
+    <v-avatar src='{{item.headImg}}' size='150' v-class='avatar'></v-avatar>
+
+    <!-- 基本信息 -->
+    <view class='stylist-msg'>
+      <view class='stylist-name'>{{item.name}}</view>
+      <view class='stylist-price'>
+        <v-price price="{{item.price}}" format='1' v-class='price-left' type='error'></v-price>
+        <v-price price="{{item.originPrice}}" format='0' type='info'></v-price>
+
+        <v-icon icon='icon-question' v-class='question' catchtap='showQuestion'></v-icon>
+      </view>
+
+      <!-- 多少人正在剪发 -->
+      <view class='cutting-list'>
+        <block wx:for="{{item.cutting}}" wx:key>
+          <v-icon icon='icon-moon' color='#333'></v-icon>
+        </block>
+      </view>
+      <view class='work-time'  wx:if="{{item.resting == 0}}">前面还有{{item.cutting}}人</view>
+      <view class='work-time'  wx:if="{{item.resting == 1}}">{{item.workTime}}</view>
+    </view>
+
+    <v-button type='primary' wx:if="{{item.resting == 0}}" size='normal' v-class='take-button' bindtap='handleModal'>一键取号</v-button>
+    <v-button type='info' wx:if="{{item.resting == 1}}" size='normal' v-class='take-button'>休息中</v-button>
+  </v-card>
+</block>
+
+<v-modal show="{{showModal}}" bind:confirm="closeModal" v-class='modal-class' title='确认取号'>
+  <view class='select-stylist'>
+    <view class='select-stylist-info'>
+      <v-avatar size='150' src='/common/images/barber_head2.jpg'></v-avatar>
+      <view class='info'>
+        <text class='name'>刘文晨</text>
+        <v-price type='default' format='1' price='38' v-class='select-stylist-price'></v-price>
+      </view>
+    </view>
+
+    <view class='address'>
+      <view class='select-store-name'>最佳Tony工作室</view>
+      <view class='distant'>195m</view>
+    </view>
+  </view>
+
+  <v-tip v-class='select-tip'>过号需重新取号，建议您提前到店等候</v-tip>
+
+  
+</v-modal>
+
+

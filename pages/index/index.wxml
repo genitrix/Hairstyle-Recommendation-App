@@ -1,0 +1,28 @@
+<swiper indicator-dots="true" circular="true" 
+  autoplay="true" interval="3000" duration="1000" style="width:100%;height:{{bannerHeight}}px;">
+  <block wx:for="{{banner}}" wx:key="key1"> 
+    <swiper-item>
+      <image src="{{item}}" mode="widthFix" class="swiper-image" position='center'/>
+    </swiper-item>
+  </block> 
+</swiper>
+
+
+
+<view class="func-area">
+	<view bindtap="showCategories" data-operation='design1/design1'>
+		<image src="{{URLdesign}}" mode="aspectFill" class="blue" />
+		<text>发型设计</text>
+	</view>
+	<view bindtap="showCategories" data-operation='store-detail/index'>
+		<image src="{{URLbook}}" mode="aspectFill" class="blue" />
+		<text>理发预约</text>
+	</view>
+		<view bindtap="showCategories" data-operation='my/my'>
+		<image src="{{URLwode}}" mode="aspectFill" class="blue" />
+		<text>个人信息</text>
+	</view>
+</view>
+
+
+

@@ -1,0 +1,35 @@
+<view class="container">
+
+    <image class="imagebg" mode="widthFix" src="../../images/newimage/bg.png" ></image>
+        <image wx:if="{{gender=='male'}}" class="toptext" mode="aspectFill" style="width:600rpx;height:80rpx;left:75rpx;top:30rpx;" src="{{Text[0]}}"> </image>
+        <image wx:if="{{gender=='female'}}" class="toptext" mode="aspectFill" style="width:600rpx;height:80rpx;left:75rpx;top:30rpx;" src="{{Text[1]}}"> </image>
+        <view class="u-img1" style="top:100rpx;left:175rpx;width:400rpx;height:400rpx">       
+            <image class="i-user" mode="widthFix"  src="{{image_people}}"></image>
+        </view>
+      
+        <view class="text" style="left:25rpx;top:540rpx;height: 40rpx;width:725rpx;">
+            <text class="t1">颜值：{{beauty}}</text>
+            <text class="t1">年龄：{{age}}</text>
+            <text class="t1">脸型：{{face_shape}}</text>
+        </view>
+  
+    <view class="u-face-img pa">
+        <view class="img-box clearfix">
+            <image class="u-img-l" mode="aspectFill" style="width:180rpx;height:180rpx;left:25rpx;top:620rpx;"src="{{image_people}}"></image>
+            <image  mode="aspectFill" style="width:180rpx;height:180rpx;left:310rpx;top:620rpx;"src="../../images/newimage/blue.png"></image>
+            <image class="u-img-r" mode="scaleToFill"style="width:180rpx;height:180rpx;left:300rpx;top:620rpx;" src="{{show_Pic}}"></image>
+        </view>
+    </view>
+
+    <view class="face-analyse-text">
+            <text class="text1" style=" left:25rpx;top:830rpx;height:40rpx;width:725rpx;">您的脸型特征</text>
+            <text class="text2" style=" left:25rpx;top:860rpx;height: 100rpx;width:600rpx;">
+            {{show_Des}}</text>
+    </view>
+       
+    <button class="mybutton1" bindtap="MyNavigator2to3" style="left:50rpx;top:1075rpx;height:100rpx;width:650rpx;">  
+        <view class="mytext" style="left:50rpx;top:1100rpx;height:40rpx;width:650rpx;">
+            快来挑选我们为您设计的发型吧
+        </view>
+    </button>
+</view>

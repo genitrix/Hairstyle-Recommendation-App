@@ -1,0 +1,34 @@
+
+<view class="contentView">
+<image class="sexbtn" bindtap="changeSex" src="{{currentGenderPic}}"></image>
+<image bindtap="Refresh" class="again" src="../../images/icon_saomiao.png"></image>
+<image class="imagebg" mode="widthFix" src="{{bg}}"></image>
+    <view class="viewstyle" style="width:650rpx;height:{{pic_Height}}rpx; top:150rpx;left:50rpx;transform: translate(0, 0) scale({{currentScale}}) rotate({{currentRotate}}deg);">
+        <canvas canvasId="myCanvas" class="canvas-box" disableScroll="true" style="width:100% ; height: 100%; top:0px"></canvas>
+        <image class="imageClass" mode="aspectFill" src="{{image_people}}" style="width:650rpx;height:{{pic_Height}}rpx; top:150rpx;left:50rpx;transform: translate(0, 0) scale({{currentScale}}) rotate({{currentRotate}}deg);"></image>  
+    </view>
+
+    <view class="viewClass z-i999">
+        <view class="color_right_area_view">
+            <view class="left_area_view">
+                <view class="color_right_area" style="width: 100%;margin-top:2px;">
+                    <scroll-view class="color_right_area area-scroll" scrollLeft="0" scrollX="true">
+                        <view class="color_right_area area_list" bindtap="changeTypeImg" data-operation="{{index}}" wx:for="{{currentTypelist}}" wx:key="type">
+                            <view class="area_list_box {{currentTypeIndex==index?'is_checked':'normal'}}" data-param="{{index}}" style="width:{{catWidth}}px">
+                                <text class="l-box-t1">{{item.type}}</text>
+                            </view>
+                        </view>
+                    </scroll-view>
+                </view>
+                <view style="width:100%; display: flex;">
+                    <scroll-view class="bottomClass" scrollLeft="{{scrollLeft}}" scrollX="true">
+                        <view class="hair-list {{currentHairIndex==index?'selectHair':'normalHair'}}" wx:for="{{currentTarget}}" bindtap="changeHairImg" data-operation="{{index}}" >
+                            <image class="hair_image" lazyLoad="true" mode="aspectFit" src="{{item}}"></image>
+                        </view>
+                    </scroll-view>
+                </view>
+            </view>
+            <view bindtap="saveAction" class="nextStep">保存</view>
+        </view>
+    </view>
+</view>

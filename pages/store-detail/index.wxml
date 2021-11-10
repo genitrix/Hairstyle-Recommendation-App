@@ -1,0 +1,12 @@
+<!--index.wxml-->
+<view class="scrollPage">
+
+
+  <v-map></v-map>
+  <v-swiper list='{{banner}}'></v-swiper>
+
+  <store-list list='{{store}}'></store-list>
+
+  <!-- <v-button size='normal' type='primary' bind:click='handleClick'>显示</v-button>
+  <v-modal show='{{showModal}}'  bindconfirm='handleConfirm'></v-modal> -->
+</view>
